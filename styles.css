@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f5f5f5;
+    scroll-behavior: smooth;
+}
+
+.background-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);   /*  or 0.7 */
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.dark-mode{
+    background-color: black;
+}
+
+ .background-overlay.dark-mode{
+      background-color: rgba(0, 0, 0, 0.1);   /*  or 0.7 */
+ }
+
+header{
+    background-color: rgba(64, 64, 64, .5);
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100vw;
+    padding: 15px 1%;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header h2{
+    margin-right: auto;
+    font-size: 25px;
+    padding-left: 3%;
+}
+
+.nav_links{
+    list-style: none;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 15px;
+}
+
+.nav_links li a{
+    text-decoration: none;
+}
+
+.nav-contact-btn1, .nav-contact-btn2{
+    background-color: rgba(217, 217, 217, .5);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px; 
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-contact-btn1:hover{
+  background-color: #3d3e3f;
+
+}
+
+.nav-contact-btn2:hover{
+  background-color: #3d3e3f;
+
+}
+
+
+.hero{
+    width: 100%;
+    height: 100vh; 
+    background-image: url("img/mountain-waterfall.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.hero-content{
+    position: relative;
+    transform: translateY(-10px);
+    text-align: center;
+    line-height: 80px;
+    z-index: 1;
+}
+
+.hero-content h1{
+    font-size: 48px;
+}
+
+.hero-content h2{
+    font-size: 32px;
+}
+
+.hero-content h3{
+    font-size: 24px;
+}
+
+.hero-content-btn{
+    background-color: rgb(111, 110, 110);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px; 
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease 0s;
+}
+
+.hero-content-btn a {
+  text-decoration: none;
+}
+
+.hero-content-btn:hover{
+  background-color: #3d3e3f;
+}
+
+ .about-rm{
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("img/forest-trail.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+.about-rm-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 30px 20%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.about-rm-content h1{
+    font-size: 48px;
+    padding-bottom: 100px;
+    padding-top: 50px
+}
+
+.about-rm-description{
+    font-size: 26px; 
+    line-height: 67px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.activites_events{
+    position: relative;
+    background-color: rgb(66,71,57); 
+    width: 100%;
+    height: 100vh; 
+    padding: 30px 5%;
+}
+
+.activites-description{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.activites-description h1{
+    font-size: 48px;
+    padding-bottom: 50px;
+}
+
+.activites-description p{
+  padding: 50px;
+  font-size: 1.2vw;
+}
+
+.activites_events-grid {
+    margin-top: 100px;
+    /* background-color: rgba(87, 221, 172, .5); */
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.activites-img-overlay{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left:0;
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activites-img-overlay >*{
+  transform: translateY(10px);
+  transition: all .3s ease;
+}
+
+.activites-img-overlay:hover {
+  opacity: 1;
+}
+
+.activites-img-overlay:hover >*{
+  transform: translateY(0);
+}
+
+.activites-grid-item-1{
+  position: relative;
+  margin: 5px;
+}
+
+.activites-grid-item-1 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 80%;
+}
+
+
+.activites-grid-item-2{
+  position: relative;
+  margin: 5px;
+}
+
+.activites-grid-item-2 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
+
+}
+
+.activites-grid-item-3{
+  position: relative;
+  margin: 5px;
+}
+
+.activites-grid-item-3 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 80%;
+}
+
+.activites-grid-item-4{
+  position: relative;
+  margin: 5px;
+}
+
+.activites-grid-item-4 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 90%;
+
+}
+
+.activites-grid-item-5{
+  position: relative;
+  margin: 5px;
+}
+
+.activites-grid-item-5 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+
+}
+
+.activites-grid-item-6{
+  position: relative;
+  margin: 5px;
+}
+
+.activites-grid-item-6 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
+
+}
+
+.activites-grid-item-7{
+  position: relative;
+  margin: 5px;
+}
+
+.activites-grid-item-7 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+
+}
+
+.activites-grid-item-8{
+  position: relative;
+  margin: 5px;
+}
+
+.activites-grid-item-8 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 90%;
+
+}
+
+.activites-grid-item-9{
+  position: relative;
+  margin: 5px;
+}
+
+.activites-grid-item-9 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 70%;
+
+}
+
+.activites-grid-item-10{
+  position: relative;
+  margin: 5px;
+}
+
+.activites-grid-item-10 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 80%;
+
+}
+
+.activites-grid-item-11{
+  position: relative;
+  margin: 5px;
+}
+
+.activites-grid-item-11 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 80%;
+
+}
+
+
+
+
+.testimonials{
+    position: relative;
+    background-image: url("img/river-rocks.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.testimonials-content{
+    /* background-color: rgb(122, 24, 24); */
+    width: 100%;
+    height: 100%;
+    position: relative; 
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.testimonials-content h1{
+    /* background-color: pink; */
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 48px;
+    text-align: center;
+}
+
+.testimonials-layouts{
+    /* background-color: rgb(12, 32, 49); */
+    width: 100%; 
+    height: 100%;
+    padding: 10px 80px;  
+    overflow: hidden; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.testimonials-layout1{
+    /* background-color: rgb(163, 13, 105); */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonials-layout2{
+    /* background-color: rgb(24, 75, 31); */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials-layout3{
+    /* background-color: rgb(67, 124, 144); */
+    padding: 10px 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonials-layout4{
+    /* background-color: rgb(24, 75, 31); */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials-layout5{
+    /* background-color: rgb(163, 13, 105); */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.ellipse-container{
+    background-color: #74714C;
+    width: 325px;
+    /* height: 100px; */
+    /* border-radius: 50% / 50%;
+    padding: 8px 25px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ellipse-container-2{
+    background-color: #74714C;
+    width: 325px;
+    /* height: 100px; */
+    /* border-radius: 50% / 50%;
+    padding: 8px 25px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ellipse-container-2 p{
+    margin-top: 10px;
+    line-height: 25px;
+    text-align: center;
+}
+
+
+.ellipse-container p{
+    margin-top: 10px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.rsvp-section{
+    position: relative;
+    background-image: url("img/kayaks.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    /* overflow-y: auto; */
+}
+
+.rsvp-content{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    display: flex;
+    flex-direction: column;
+}
+
+.rsvp-content h1{
+    /* background-color: red; */
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: 48px;
+    text-align: center;
+}
+
+
+.rsvp-content-2{
+  /* background-color: purple; */
+  width: 100%;
+  height: 100%;
+  padding: 10px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.rsvp-content-area1 {
+ /* background-color: rgba(251, 255, 3, 0.2); */
+ width: 100%;
+ padding: 50px;
+}
+
+/* 
+.area1-content{
+    background-color: red;
+}
+ */
+
+.area1-content p{
+    text-align: center;
+    font-size: 1.2vw;
+    line-height: 30px;
+    padding-bottom: 30px;
+}
+
+.area1-content-2 {
+    margin-top: 10px;
+      background-color: rgba(64, 64, 64, 0.3);
+      padding: 10px;
+}
+
+.area1-content-2 form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+label{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    gap: 20px;
+}
+
+
+input {
+  background-color: rgba(64, 64, 64, 0.3);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+}
+
+input.error {
+  border-color: red;
+  background-color: #ffe6e6;
+  box-shadow: 0 0 4px red;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+
+input[type="submit"] {
+    margin-top: 30px;;
+  padding: 10px 20px;
+  background-color: rgba(217, 217, 217, .5);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.rsvp-content-area2 {
+  background-color: rgba(64, 64, 64, 0.3);
+  /* height: 100%; */
+  width: 100%;
+  padding: 50px;
+
+}
+
+
+/* .area2-content{
+     background-color: red;
+} */
+
+#confirmed-heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  /* color: #222; */
+  margin-bottom: 16px;
+  padding-bottom: 6px;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
+}
+
+#confirmation-list {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+/* Style each list item */
+#confirmation-list li {
+  background-color: rgba(217, 217, 217, .5);
+  /* background-color: ; */
+  margin-bottom: 12px;
+  text-align: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Optional hover effect */
+#confirmation-list li:hover {
+  background-color: #3d3e3f;
+}
+
+
+.error-message {
+  color: rgb(255, 0, 0);
+  font-size: 14px;
+  margin-top: -6px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input.error  {
+border-color: red;
+    background-color: rgba(64, 64, 64, 0.3);
+  box-shadow: 0 0 4px red;
+}
+
+/* Modal container */
+.modal {
+  display: none;      
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5); /* Black with transparency */
+  backdrop-filter: blur(2px);
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: rgba(64, 64, 64, .5);
+  margin: 15% auto;
+  padding: 30px 40px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+/* Style the modal image */
+#modal-image {
+  width: 80px; /* or whatever size you want */
+  margin: 20px auto 10px auto;
+  display: block;
+  animation: rotate360 5s linear infinite;
+  /* border-radius: 20px; */
+}
+
+/* Keyframes for smooth continuous rotation */
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Close button */
+.close {
+  color: white;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  font-size: 32px;
+  color: red;
+}
