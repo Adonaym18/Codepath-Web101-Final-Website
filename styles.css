@@ -13,6 +13,8 @@ body {
   background-color: lightblue;  
   width: 100%; 
   height: 100vh;
+  padding: 10px;
+
   display: flex; 
   flex-direction: column;
   justify-content: space-between;
@@ -59,6 +61,8 @@ body {
   background-color: rgb(207, 230, 173);
   width: 100%; 
   height: 100vh;
+  padding: 10px;
+
   display: flex; 
   flex-direction: column;
   justify-content: center;
@@ -90,6 +94,8 @@ body {
   background-color: rgb(173, 204, 230);
   width: 100%; 
   height: 100vh;
+  padding: 10px;
+
   display: flex; 
   flex-direction: column;
   justify-content: center;
@@ -131,3 +137,185 @@ body {
 }
 
 /*! Section 4 */
+
+.frame4 {
+  background-color: rgb(212, 173, 230);
+  width: 100%; 
+  height: 100vh;
+  padding: 10px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stay-center {
+  background-color: cadetblue;
+  width: 100%; 
+  height: 100%; 
+  padding: 10px; 
+
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.stay-center-left, .stay-center-right {
+  background-color: lightgray;
+  width: 50%;
+  height: 100%; 
+}
+
+/* ! Section 5 */
+
+.frame5{
+  background-color: rgb(230, 173, 173);
+  width: 100%; 
+  height: 60vh;
+  padding: 10px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dine-center {
+  background-color: rgb(129, 202, 222);
+  width: 100%; 
+  height: 100%; 
+  padding: 10px; 
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+}
+
+.dine-center-left, .dine-center-right{
+  width: 100%; 
+  height: 100%; 
+  background-color: rgb(119, 63, 63);
+}
+
+.dine-center-right {
+  padding: 10px; 
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; 
+}
+
+.dine-center-right-top, .dine-center-right-btm {
+  background-color: lightgray; 
+  height: 100%; 
+  width: 100%; 
+}
+
+/*! Section 6  */
+
+.frame6{
+  background-color: rgb(157, 65, 99);
+  width: 100%; 
+  height: 50vh;
+  padding: 10px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  gap: 20px;
+}
+
+.testimonial-top {
+  background-color: lightgray;
+  width: 100%; 
+  height: 100px; 
+}
+
+.testimonial-btm {
+  background-color: rgb(244, 155, 11);
+  padding: 10px; 
+  width: 100%; 
+  flex: 1;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.testimonial-btm div{
+  background-color: lightgray;
+  height: 100%;
+  flex: 1;
+}
+
+/*! Section 7  */
+
+.frame7 {
+  background-color: rgb(70, 65, 157);
+  width: 100%; 
+  height: 100vh;
+  padding: 10px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  gap: 20px;
+}
+
+.faq-top {
+  background-color: lightgray;
+  width: 100%; 
+  height: 10%;
+}
+
+.faq-btm {
+  background-color: lightgray;
+  width: 100%; 
+  flex: 1;
+}
+
+
+.frame8 {
+  background-color: rgb(157, 65, 65);
+  width: 100%; 
+  height: 100vh;
+  padding: 10px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  gap: 20px;
+}
+
+.inquire-top {
+  background-color: lightgray;
+  width: 100%; 
+  height: 10%;
+}
+
+.inquire-btm {
+  background-color: lightgray;
+  width: 100%; 
+  padding: 10px;
+  flex: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.inquire-btm-content {
+  background-color: lightcoral;
+  height: 100%; 
+  width: 60%; 
+}
+
+
+
