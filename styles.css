@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 * {
   padding: 0; 
   margin: 0; 
@@ -10,10 +13,15 @@ body {
 }
 
 .frame1 {
-  background-color: lightblue;  
+  background-image: url("img/hero-section.jpg");  
+  background-size: cover; 
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+
+
   width: 100%; 
   height: 100vh;
-  padding: 10px;
+  /* padding: 10px; */
 
   display: flex; 
   flex-direction: column;
@@ -21,18 +29,61 @@ body {
 }
 
 .navbar {
-  background-color: lightpink;
+  position: fixed;
+  background-color: rgba(48, 48, 48, .8);
   width: 100%;
-  padding: 10px 30px;
+  padding: 10px 50px;
+  backdrop-filter: blur(8px); 
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+.nav-Title{
+  /* background-color: blue; */
+  font-family: "Zen Dots";
+  font-weight: 500;
+  color: white; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_links {
+  /* background-color: darkcyan; */
+  padding: 10px; 
+  width: 50%;
+}
+
+.nav_links ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-family: "Zen Dots";
+  font-weight: 300;
+}
+
+.nav-btn {
+  font-family: "Zen Dots";
+  background-color: transparent; 
+  color: white; 
+  text-decoration: none; 
+  border: none;
+}
+
 .hero-section{
-  background-color: beige;
-  padding: 20px 150px;
+  /* background-color: beige; */
+  padding: 20px 50px;
   height: 500px;
 
   display: flex;
@@ -42,17 +93,102 @@ body {
 }
 
 .hero-section-left, .hero-section-right {
-  background-color: lightgreen; 
-  width: 20%; 
+  /* background-color: lightgreen;  */
+  width: 50%; 
+  display: flex; 
+  flex-direction: column;
+  justify-content: start;
 }
 
+.hero-section-left{
+  padding: 150px 100px 0px 20px;
+ 
+}
+
+.hero-section-left-top {
+  /* background-color: rgb(120, 120, 140); */
+}
+
+.hero-section-left-top h1{
+  font-family: "Zen Dots";
+  font-size: 36px;
+  color: white;
+  padding: 0px 0px 10px 40px;
+
+}
+
+.hero-section-left-btm {
+  /* background-color: rgb(162, 169, 133); */
+}
+
+.hero-section-left-btm p {
+  padding: 0px 0px 0px 40px;
+  color: white;
+  font-family: "Zen Kaku Gothic Antique";
+  font-weight: 300;
+}
+
+
+.hero-section-right{
+  padding: 200px 0px 0px 100px;
+ 
+}
+
+.hero-section-right-top {
+  /* background-color: rgb(120, 120, 140); */
+}
+
+.hero-section-right-top h1{
+  font-family: "Zen Dots";
+  font-size: 36px;
+  color: white;
+  padding: 0px 0px 10px 40px;
+
+}
+
+.hero-section-right-mid {
+  /* background-color: rgb(162, 169, 133); */
+}
+
+.hero-section-right-mid p {
+  padding: 0px 0px 0px 40px;
+  color: white;
+  font-family: "Zen Kaku Gothic Antique";
+  font-weight: 300;
+}
+
+.hero-section-right-btm {
+  /* background-color: lightgray; */
+  padding: 20px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero-section-right-btn {
+  padding: 2px 10px;
+  font-size: 16px;
+  font-family: "Zen Dots";
+
+}
+
+
 .hero-section-bottom {
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
+
+  margin-bottom: 4%;
 
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.hero-section-bottom h3 {
+  color: white; 
+  font-family: "Inria Serif";
+  font-weight: 300;
 }
 
 /*! Section 2 */
